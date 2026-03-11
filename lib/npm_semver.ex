@@ -79,22 +79,27 @@ defmodule NPMSemver do
   """
   @spec max_satisfying([String.t()], String.t(), keyword()) :: String.t() | nil
   def max_satisfying(versions, range_string, opts \\ []) do
-    with {:ok, range} <- Range.parse(range_string, opts) do
-      versions
-      |> Enum.filter(fn v ->
-        case Version.parse(v, opts) do
-          {:ok, ver} -> Range.satisfies?(range, ver, opts)
-          _ -> false
-        end
-      end)
-      |> Enum.sort(fn a, b ->
-        {:ok, va} = Version.parse(a, opts)
-        {:ok, vb} = Version.parse(b, opts)
-        Version.compare(va, vb) == :gt
-      end)
-      |> List.first()
-    else
+    case Range.parse(range_string, opts) do
+      {:ok, range} -> do_max_satisfying(versions, range, opts)
       _ -> nil
+    end
+  end
+
+  defp do_max_satisfying(versions, range, opts) do
+    versions
+    |> Enum.filter(&version_satisfies?(&1, range, opts))
+    |> Enum.sort(fn a, b ->
+      {:ok, va} = Version.parse(a, opts)
+      {:ok, vb} = Version.parse(b, opts)
+      Version.compare(va, vb) == :gt
+    end)
+    |> List.first()
+  end
+
+  defp version_satisfies?(v, range, opts) do
+    case Version.parse(v, opts) do
+      {:ok, ver} -> Range.satisfies?(range, ver, opts)
+      _ -> false
     end
   end
 

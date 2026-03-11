@@ -43,7 +43,7 @@ defmodule NPMSemver.Version do
     |> optional(build_metadata)
     |> eos()
 
-  defparsecp :parse_version, version
+  defparsecp(:parse_version, version)
 
   @doc """
   Parse a version string.

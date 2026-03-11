@@ -10,7 +10,13 @@ defmodule NPMSemverTest do
                       |> File.read!()
                       |> :json.decode()
 
-    for {%{"range" => range, "version" => version, "loose" => loose, "includePrerelease" => include_pre}, idx} <-
+    for {%{
+           "range" => range,
+           "version" => version,
+           "loose" => loose,
+           "includePrerelease" => include_pre
+         },
+         idx} <-
           Enum.with_index(@include_fixtures) do
       @tag :"include_#{idx}"
       test "##{idx}: #{inspect(range)} includes #{inspect(version)}#{if loose, do: " (loose)"}#{if include_pre, do: " (includePrerelease)"}" do
@@ -31,7 +37,13 @@ defmodule NPMSemverTest do
                       |> File.read!()
                       |> :json.decode()
 
-    for {%{"range" => range, "version" => version, "loose" => loose, "includePrerelease" => include_pre}, idx} <-
+    for {%{
+           "range" => range,
+           "version" => version,
+           "loose" => loose,
+           "includePrerelease" => include_pre
+         },
+         idx} <-
           Enum.with_index(@exclude_fixtures) do
       if is_binary(version) do
         @tag :"exclude_#{idx}"

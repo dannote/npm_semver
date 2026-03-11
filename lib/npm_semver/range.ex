@@ -76,7 +76,7 @@ defmodule NPMSemver.Range do
     |> concat(optional_ws)
     |> eos()
 
-  defparsecp :tokenize, tokens
+  defparsecp(:tokenize, tokens)
 
   # --- Public API ---
 
@@ -84,27 +84,24 @@ defmodule NPMSemver.Range do
   @spec parse(String.t(), keyword()) :: {:ok, t()} | :error
   def parse(range_string, opts \\ []) do
     range_string = String.trim(range_string)
+
+    if range_string in ["", "*", "||"] do
+      {:ok, %__MODULE__{sets: [[]]}}
+    else
+      do_parse(range_string, opts)
+    end
+  end
+
+  defp do_parse(range_string, opts) do
     include_pre = Keyword.get(opts, :include_prerelease, false)
-
     loose = Keyword.get(opts, :loose, false)
+    range_string = if loose, do: normalize_loose_range(range_string), else: range_string
 
-    cond do
-      range_string in ["", "*", "||"] ->
-        {:ok, %__MODULE__{sets: [[]]}}
-
-      true ->
-        range_string = if loose, do: normalize_loose_range(range_string), else: range_string
-
-        case tokenize(range_string) do
-          {:ok, tokens, "", _, _, _} ->
-            case build_sets(tokens, include_pre) do
-              {:ok, sets} -> {:ok, %__MODULE__{sets: sets}}
-              :error -> :error
-            end
-
-          _ ->
-            :error
-        end
+    with {:ok, tokens, "", _, _, _} <- tokenize(range_string),
+         {:ok, sets} <- build_sets(tokens, include_pre) do
+      {:ok, %__MODULE__{sets: sets}}
+    else
+      _ -> :error
     end
   end
 
@@ -118,23 +115,22 @@ defmodule NPMSemver.Range do
   @doc "Convert range to Elixir/hex_solver requirement string."
   @spec to_elixir_string(t()) :: String.t()
   def to_elixir_string(%__MODULE__{sets: sets}) do
-    sets
-    |> Enum.map(fn comparators ->
-      comparators
-      |> Enum.map(fn {op, version} ->
-        op_str = case op do
-          :gte -> ">="
-          :gt -> ">"
-          :lte -> "<="
-          :lt -> "<"
-          :eq -> "=="
-        end
-        "#{op_str} #{version}"
-      end)
-      |> Enum.join(" and ")
-    end)
-    |> Enum.join(" or ")
+    Enum.map_join(sets, " or ", &format_comparator_set/1)
   end
+
+  defp format_comparator_set(comparators) do
+    Enum.map_join(comparators, " and ", &format_comparator/1)
+  end
+
+  defp format_comparator({op, version}) do
+    "#{op_to_string(op)} #{version}"
+  end
+
+  defp op_to_string(:gte), do: ">="
+  defp op_to_string(:gt), do: ">"
+  defp op_to_string(:lte), do: "<="
+  defp op_to_string(:lt), do: "<"
+  defp op_to_string(:eq), do: "=="
 
   # --- Token → comparator set builder ---
 
@@ -142,19 +138,21 @@ defmodule NPMSemver.Range do
     sets =
       tokens
       |> split_on_or()
-      |> Enum.map(&build_comparator_set(&1, include_pre))
+      |> Enum.map(fn set_tokens -> build_comparator_set(set_tokens, include_pre) end)
 
-    if Enum.any?(sets, &(&1 == :error)) do
-      :error
-    else
-      {:ok, Enum.map(sets, fn {:ok, s} -> s end)}
-    end
+    {:ok, sets}
   end
 
   defp split_on_or(tokens) do
     tokens
-    |> Enum.chunk_by(fn {:or, _} -> true; _ -> false end)
-    |> Enum.reject(fn [{:or, _} | _] -> true; _ -> false end)
+    |> Enum.chunk_by(fn
+      {:or, _} -> true
+      _ -> false
+    end)
+    |> Enum.reject(fn
+      [{:or, _} | _] -> true
+      _ -> false
+    end)
   end
 
   defp build_comparator_set(tokens, include_pre) do
@@ -162,18 +160,21 @@ defmodule NPMSemver.Range do
       {:hyphen, before, after_} ->
         from = extract_partial(before)
         to = extract_partial(after_)
-        {:ok, expand_hyphen(from, to, include_pre)}
+        expand_hyphen(from, to, include_pre)
 
       :none ->
-        comps = build_comparators(tokens, include_pre)
-        if comps == :error, do: :error, else: {:ok, comps}
+        build_comparators(tokens, include_pre)
     end
   end
 
   defp find_hyphen(tokens) do
-    case Enum.split_while(tokens, fn {:hyphen_sep, _} -> false; _ -> true end) do
+    case Enum.split_while(tokens, fn
+           {:hyphen_sep, _} -> false
+           _ -> true
+         end) do
       {before, [{:hyphen_sep, _} | after_]} when before != [] and after_ != [] ->
         {:hyphen, before, after_}
+
       _ ->
         :none
     end
@@ -237,7 +238,11 @@ defmodule NPMSemver.Range do
         nil -> nil
       end
 
-    nums = Enum.map(nums, fn :x -> nil; n -> n end)
+    nums =
+      Enum.map(nums, fn
+        :x -> nil
+        n -> n
+      end)
 
     case nums do
       [maj] -> {maj, nil, nil, pre}
@@ -275,7 +280,9 @@ defmodule NPMSemver.Range do
 
   defp expand_tilde({nil, _, _, _}), do: []
   defp expand_tilde({maj, nil, nil, _}), do: [{:gte, v(maj, 0, 0)}, {:lt, v(maj + 1, 0, 0, [0])}]
-  defp expand_tilde({maj, min, nil, _}), do: [{:gte, v(maj, min, 0)}, {:lt, v(maj, min + 1, 0, [0])}]
+
+  defp expand_tilde({maj, min, nil, _}),
+    do: [{:gte, v(maj, min, 0)}, {:lt, v(maj, min + 1, 0, [0])}]
 
   defp expand_tilde({maj, min, pat, pre}) do
     [{:gte, v(maj, min, pat, parse_pre_list(pre))}, {:lt, v(maj, min + 1, 0, [0])}]
@@ -285,10 +292,18 @@ defmodule NPMSemver.Range do
 
   defp expand_caret({nil, _, _, _}), do: []
   defp expand_caret({0, nil, nil, _}), do: [{:lt, v(1, 0, 0, [0])}]
-  defp expand_caret({0, 0, nil, p}), do: [{:gte, v(0, 0, 0, parse_pre_list(p))}, {:lt, v(0, 1, 0, [0])}]
-  defp expand_caret({0, m, nil, p}), do: [{:gte, v(0, m, 0, parse_pre_list(p))}, {:lt, v(0, m + 1, 0, [0])}]
-  defp expand_caret({0, 0, pat, p}), do: [{:gte, v(0, 0, pat, parse_pre_list(p))}, {:lt, v(0, 0, pat + 1, [0])}]
-  defp expand_caret({0, m, pat, p}), do: [{:gte, v(0, m, pat, parse_pre_list(p))}, {:lt, v(0, m + 1, 0, [0])}]
+
+  defp expand_caret({0, 0, nil, p}),
+    do: [{:gte, v(0, 0, 0, parse_pre_list(p))}, {:lt, v(0, 1, 0, [0])}]
+
+  defp expand_caret({0, m, nil, p}),
+    do: [{:gte, v(0, m, 0, parse_pre_list(p))}, {:lt, v(0, m + 1, 0, [0])}]
+
+  defp expand_caret({0, 0, pat, p}),
+    do: [{:gte, v(0, 0, pat, parse_pre_list(p))}, {:lt, v(0, 0, pat + 1, [0])}]
+
+  defp expand_caret({0, m, pat, p}),
+    do: [{:gte, v(0, m, pat, parse_pre_list(p))}, {:lt, v(0, m + 1, 0, [0])}]
 
   defp expand_caret({maj, nil, nil, p}) do
     [{:gte, v(maj, 0, 0, parse_pre_list(p))}, {:lt, v(maj + 1, 0, 0, [0])}]
