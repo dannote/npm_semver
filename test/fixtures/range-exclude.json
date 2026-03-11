@@ -1,0 +1,578 @@
+[
+  {
+    "range": "1.0.0 - 2.0.0",
+    "version": "2.2.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.3+asdf - 2.4.3+asdf",
+    "version": "1.2.3-pre.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.3+asdf - 2.4.3+asdf",
+    "version": "2.4.3-alpha",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3+build",
+    "version": "2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3+build",
+    "version": "1.2.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3",
+    "version": "1.2.3-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2",
+    "version": "1.2.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.2",
+    "version": "1.3.0-beta",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=1.2.3",
+    "version": "1.2.3-beta",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3",
+    "version": "1.2.3-beta",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "=0.7.x",
+    "version": "0.7.0-asdf",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.7.x",
+    "version": "0.7.0-asdf",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=0.7.x",
+    "version": "0.7.0-asdf",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1",
+    "version": "1.0.0beta",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "<1",
+    "version": "1.0.0beta",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "< 1",
+    "version": "1.0.0beta",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.0.0",
+    "version": "1.0.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0",
+    "version": "0.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0",
+    "version": "0.0.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0",
+    "version": "0.1.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.0.0",
+    "version": "0.0.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.0.0",
+    "version": "0.1.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=2.0.0",
+    "version": "3.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=2.0.0",
+    "version": "2.9999.9999",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=2.0.0",
+    "version": "2.2.9",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<2.0.0",
+    "version": "2.9999.9999",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<2.0.0",
+    "version": "2.2.9",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.1.97",
+    "version": "v0.1.93",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.1.97",
+    "version": "0.1.93",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "0.1.20 || 1.2.4",
+    "version": "1.2.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.2.3 || <0.0.1",
+    "version": "0.0.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.2.3 || <0.0.1",
+    "version": "0.2.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.x.x",
+    "version": "1.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.x.x",
+    "version": "3.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.x",
+    "version": "1.3.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.x || 2.x",
+    "version": "3.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.x || 2.x",
+    "version": "1.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.*.*",
+    "version": "1.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.*.*",
+    "version": "3.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.*",
+    "version": "1.3.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.* || 2.*",
+    "version": "3.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.* || 2.*",
+    "version": "1.1.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2",
+    "version": "1.1.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.3",
+    "version": "2.4.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~0.0.1",
+    "version": "0.1.0-alpha",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~0.0.1",
+    "version": "0.1.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~2.4",
+    "version": "2.5.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~2.4",
+    "version": "2.3.9",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~>3.2.1",
+    "version": "3.3.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~>3.2.1",
+    "version": "3.2.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1",
+    "version": "0.2.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~>1",
+    "version": "2.2.3",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.0",
+    "version": "1.1.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<1",
+    "version": "1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.2",
+    "version": "1.1.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1",
+    "version": "2.0.0beta",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "~v0.5.4-beta",
+    "version": "0.5.4-alpha",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "=0.7.x",
+    "version": "0.8.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.7.x",
+    "version": "0.6.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<0.7.x",
+    "version": "0.7.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<1.2.3",
+    "version": "1.2.3-beta",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "=1.2.3",
+    "version": "1.2.3-beta",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.2",
+    "version": "1.2.8",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.0.1",
+    "version": "0.0.2-alpha",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.0.1",
+    "version": "0.0.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3",
+    "version": "2.0.0-alpha",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3",
+    "version": "1.2.2",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2",
+    "version": "1.1.9",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "*",
+    "version": "v1.2.3-foo",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "*",
+    "version": "not a version",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=2",
+    "version": "glorp",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=2",
+    "version": null,
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.x",
+    "version": "3.0.0-pre.0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "^1.0.0",
+    "version": "1.0.0-rc1",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "^1.0.0",
+    "version": "2.0.0-rc1",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "^1.2.3-rc2",
+    "version": "2.0.0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "^1.0.0",
+    "version": "2.0.0-rc1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1 - 2",
+    "version": "3.0.0-pre",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1 - 2",
+    "version": "2.0.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1 - 2",
+    "version": "1.0.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.0 - 2",
+    "version": "1.0.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.1.x",
+    "version": "1.0.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.1.x",
+    "version": "1.1.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.1.x",
+    "version": "1.2.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.1.x",
+    "version": "1.2.0-a",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1.1.x",
+    "version": "1.0.0-a",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1.x",
+    "version": "1.0.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x",
+    "version": "1.1.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x",
+    "version": "1.2.0-a",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x",
+    "version": "0.0.0-a",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1.x",
+    "version": "2.0.0-a",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": ">=1.0.0 <1.1.0",
+    "version": "1.1.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0 <1.1.0",
+    "version": "1.1.0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": ">=1.0.0 <1.1.0",
+    "version": "1.1.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0 <1.1.0-pre",
+    "version": "1.1.0-pre",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "== 1.0.0 || foo",
+    "version": "2.0.0",
+    "loose": true,
+    "includePrerelease": false
+  }
+]

@@ -1,0 +1,650 @@
+[
+  {
+    "range": "1.0.0 - 2.0.0",
+    "canonical": ">=1.0.0 <=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.0.0 - 2.0.0",
+    "canonical": ">=1.0.0-0 <2.0.1-0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1 - 2",
+    "canonical": ">=1.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1 - 2",
+    "canonical": ">=1.0.0-0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1.0 - 2.0",
+    "canonical": ">=1.0.0 <2.1.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.0 - 2.0",
+    "canonical": ">=1.0.0-0 <2.1.0-0",
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": "1.0.0",
+    "canonical": "1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=*",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "*",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.0.0",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.0.0",
+    "canonical": ">1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=2.0.0",
+    "canonical": "<=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<2.0.0",
+    "canonical": "<2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">= 1.0.0",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=  1.0.0",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=   1.0.0",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "> 1.0.0",
+    "canonical": ">1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">  1.0.0",
+    "canonical": ">1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=   2.0.0",
+    "canonical": "<=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<= 2.0.0",
+    "canonical": "<=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<=  2.0.0",
+    "canonical": "<=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<    2.0.0",
+    "canonical": "<2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<\t2.0.0",
+    "canonical": "<2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.1.97",
+    "canonical": ">=0.1.97",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "0.1.20 || 1.2.4",
+    "canonical": "0.1.20||1.2.4",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=0.2.3 || <0.0.1",
+    "canonical": ">=0.2.3||<0.0.1",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "||",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.x.x",
+    "canonical": ">=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.x",
+    "canonical": ">=1.2.0 <1.3.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.x || 2.x",
+    "canonical": ">=1.2.0 <1.3.0-0||>=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "x",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.*.*",
+    "canonical": ">=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.*",
+    "canonical": ">=1.2.0 <1.3.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.* || 2.*",
+    "canonical": ">=1.2.0 <1.3.0-0||>=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2",
+    "canonical": ">=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "2.3",
+    "canonical": ">=2.3.0 <2.4.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~2.4",
+    "canonical": ">=2.4.0 <2.5.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~>3.2.1",
+    "canonical": ">=3.2.1 <3.3.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~>1",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~> 1",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.0",
+    "canonical": ">=1.0.0 <1.1.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~ 1.0",
+    "canonical": ">=1.0.0 <1.1.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0",
+    "canonical": "<1.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^ 1",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.1",
+    "canonical": ">=0.1.0 <0.2.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.0",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2",
+    "canonical": ">=1.2.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.0.1",
+    "canonical": ">=0.0.1 <0.0.2-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.0.1-beta",
+    "canonical": ">=0.0.1-beta <0.0.2-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^0.1.2",
+    "canonical": ">=0.1.2 <0.2.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3",
+    "canonical": ">=1.2.3 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.3-beta.4",
+    "canonical": ">=1.2.3-beta.4 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<1",
+    "canonical": "<1.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "< 1",
+    "canonical": "<1.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">= 1",
+    "canonical": ">=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<1.2",
+    "canonical": "<1.2.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "< 1.2",
+    "canonical": "<1.2.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">01.02.03",
+    "canonical": ">1.2.3",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": ">01.02.03",
+    "canonical": null,
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.2.3beta",
+    "canonical": ">=1.2.3-beta <1.3.0-0",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.2.3beta",
+    "canonical": null,
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^ 1.2 ^ 1",
+    "canonical": ">=1.2.0 <2.0.0-0 >=1.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2 - 3.4.5",
+    "canonical": ">=1.2.0 <=3.4.5",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2.3 - 3.4",
+    "canonical": ">=1.2.3 <3.5.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.2 - 3.4",
+    "canonical": ">=1.2.0 <3.5.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1",
+    "canonical": ">=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.2",
+    "canonical": ">=1.3.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">X",
+    "canonical": "<0.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<X",
+    "canonical": "<0.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "<x <* || >* 2.x",
+    "canonical": "<0.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">x 2.x || * || <x",
+    "canonical": "*",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=09090",
+    "canonical": null,
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=09090",
+    "canonical": ">=9090.0.0",
+    "loose": true,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=09090-0",
+    "canonical": null,
+    "loose": false,
+    "includePrerelease": true
+  },
+  {
+    "range": ">=09090-0",
+    "canonical": null,
+    "loose": true,
+    "includePrerelease": true
+  },
+  {
+    "range": "^9007199254740991.0.0",
+    "canonical": null,
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "=9007199254740991.0.0",
+    "canonical": "9007199254740991.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^9007199254740990.0.0",
+    "canonical": ">=9007199254740990.0.0 <9007199254740991.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x+build >2.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0 >=3.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.x+build <2.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x+build || 2.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0||>=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x+build.123",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x+meta-data",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x+build.123 >2.x.x+meta-data",
+    "canonical": ">=1.0.0 <2.0.0-0 >=3.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x+build <2.x.x+meta",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.x+build <=2.x.x+meta",
+    "canonical": ">=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": " 1.x.x+build   >2.x.x+build  ",
+    "canonical": ">=1.0.0 <2.0.0-0 >=3.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.2.x+build",
+    "canonical": ">=1.2.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x+meta-data",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x.x+build.123",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.2.x+build",
+    "canonical": ">=1.2.0 <1.3.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.x+meta-data",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.x.x+build.123",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x.x+build || ~2.x.x+meta",
+    "canonical": ">=1.0.0 <2.0.0-0||>=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "~1.x.x+build >2.x+meta",
+    "canonical": ">=1.0.0 <2.0.0-0 >=3.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "^1.x+build.123 <2.x.x+meta-data",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x-alpha+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">1.x.x-alpha+build",
+    "canonical": ">=2.0.0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": ">=1.x.x-alpha+build <2.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  },
+  {
+    "range": "1.x.x-alpha+build || 2.x.x+build",
+    "canonical": ">=1.0.0 <2.0.0-0||>=2.0.0 <3.0.0-0",
+    "loose": false,
+    "includePrerelease": false
+  }
+]
