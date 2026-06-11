@@ -75,6 +75,17 @@ NPMSemver.to_elixir_requirement("^1.2.3")
 
 216 test cases ported from [node-semver](https://github.com/npm/node-semver) fixtures.
 
+## Part of Elixir Volt
+
+npm_semver brings npm-compatible semantic version ranges to Elixir.
+
+It is part of a frontend stack that runs inside the BEAM — builds, JS
+runtimes, icons, and Vue-to-LiveView compilation as supervised parts of the
+application instead of external toolchain processes. See the
+[Elixir Volt](https://github.com/elixir-volt) organization for the rest, and
+[Building Blocks for the Future Web](https://github.com/elixir-vibe/building-blocks)
+for the thesis, architecture, and roadmap that tie them together.
+
 ## License
 
 MIT
